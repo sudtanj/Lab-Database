@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
+--
+-- Host: mysql8.db4free.net    Database: projectsql
+-- ------------------------------------------------------
+-- Server version	8.0.0-dmr
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Employee`
+--
+
+DROP TABLE IF EXISTS `Employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Employee` (
+  `EID` int(11) NOT NULL AUTO_INCREMENT,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) DEFAULT NULL,
+  `Gender` tinyint(1) DEFAULT NULL,
+  `DepartmentId` int(11) DEFAULT NULL,
+  `DOB` date DEFAULT NULL,
+  `Salaries` int(11) DEFAULT NULL,
+  `Nationality` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `StateID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`EID`)
+) ENGINE=InnoDB AUTO_INCREMENT=734736984 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Employee`
+--
+
+LOCK TABLES `Employee` WRITE;
+/*!40000 ALTER TABLE `Employee` DISABLE KEYS */;
+INSERT INTO `Employee` VALUES (1,'Richard','Montgomery',1,524448010,'1985-06-05',601,'USA','129A',67473),(2,'Patrick','Weaver',1,266960250,'1989-09-28',713,'USA','128TN',57747),(3,'Douglas','Garret',1,266960250,'1993-03-06',415,'USA','77791WI',2890),(4,'Ruth','Simpson',0,455626111,'1989-10-31',723,'USA','5003NY',96109),(5,'Patrick','Frazier',1,524562096,'1990-11-13',673,'USA','2100TN',27041),(6,'Juan','Dean',1,613621498,'1987-06-17',314,'USA','318NC',11377),(7,'Emily','Rose',0,669967924,'1994-10-27',573,'USA','6269CO',38242),(8,'Irene','Day',0,686634904,'1981-05-16',652,'USA','6691CA',27356),(9,'Adam','Reid',1,732259416,'1984-03-03',560,'USA','717CO',80256),(10,'Kimberly','Meyer',0,734736983,'1989-05-11',579,'USA','9529MS',92346);
+/*!40000 ALTER TABLE `Employee` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-11-28  6:57:50

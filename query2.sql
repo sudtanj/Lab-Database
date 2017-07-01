@@ -1,0 +1,11 @@
+UPDATE lab.supplier SET STATUS=10 WHERE SNUM='S3';
+SELECT * FROM lab.supplier;
+UPDATE lab.project SET JNAME='VCR' WHERE JNAME='Tape';
+SELECT * FROM lab.project;
+DELETE FROM part WHERE colour='red';
+SELECT * FROM lab.part;
+UPDATE lab.part SET PNUM='P1' WHERE PNUM='P7';
+UPDATE lab.part SET PNUM='P4' WHERE PNUM='P8';
+SELECT * FROM lab.part;
+INSERT INTO lab.part VALUES ("P6","Screw","Red",NULL,"London");
+SELECT * FROM lab.part;

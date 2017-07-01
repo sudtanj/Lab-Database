@@ -1,0 +1,10 @@
+SELECT pnum,colour FROM lab.part WHERE CITY="Rome";
+SELECT SNAME,status,city FROM lab.supplier WHERE status>15 AND CITY <> 'London' OR CITY = "Paris";
+SELECT jnum,jname,city FROM lab.project WHERE jname like '%e%' OR jname like '%a%' AND CITY="London";
+SELECT SNUM,SNAME FROM lab.supplier ORDER BY sname ASC;
+SELECT COUNT(PNUM),JNUM FROM lab.supply WHERE JNUM="J2";
+SELECT COLOUR,PNAME FROM lab.part ORDER BY COLOUR ASC;
+SELECT project.JNAME, SUM(supply.QTY) FROM lab.supply,lab.project WHERE project.JNUM=supply.JNUM GROUP BY project.JNAME ORDER BY SUM(supply.QTY) DESC;
+SELECT DISTINCT project.JNAME,project.CITY FROM lab.project WHERE JNUM not in (SELECT JNUM FROM lab.supply,lab.part where supply.pnum=part.pnum and colour='red');
+SELECT part.PNAME,supply.QTY FROM lab.part,lab.supply WHERE part.PNUM=supply.PNUM AND supply.QTY=(Select MIN(supply.QTY) FROM lab.supply);
+SELECT DISTINCT JNAME FROM lab.supply,lab.project WHERE project.JNUM=supply.JNUM AND supply.PNUM in (SELECT PNUM FROM lab.part WHERE colour='RED');
